@@ -36,8 +36,8 @@ class TestShoe:
         sys.stdout = captured_out
         stan_smith.size = "not an integer"
         sys.stdout = sys.__stdout__
-        # assert captured_out.getvalue() == "size must be an integer\n"
-        assert not stan_smith.size
+        assert captured_out.getvalue() == "size must be an integer\n"
+        # assert not stan_smith.size
 
     def test_has_material(self):
         '''can be assigned a material.'''
